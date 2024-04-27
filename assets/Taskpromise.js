@@ -29,16 +29,15 @@ for(let i = 0; i < 1; i++){
 console.log(secilenQite)
 
 const a = async (x,y)=>{
-    let b = fetch(url)
-    let c = await b
-    let d = await c.json()
+    let b = await fetch(url)
+    let c = await b.json()
     
-    for(let i = 0; i < d.length; i++){
+    for(let i = 0; i < c.length; i++){
         
-        let z = d[i].altSpellings.length-1
+        let z = c[i].altSpellings.length-1
         if(d[i].continents == x){
-            let o = d[i].altSpellings[z]
-            let inS = d[i].population
+            let o = c[i].altSpellings[z]
+            let inS = c[i].population
             let countries = {
                 olke : o,
                 insanSayi : inS,
